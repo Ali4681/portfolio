@@ -82,8 +82,8 @@ const AboutSection = () => {
                     src="/alii.png"
                     alt="Profile"
                     className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
-                    fill // This ensures it behaves like an absolutely positioned, full-size background image
-                    priority // Optional: makes sure the image loads faster if it's critical (like a profile pic)
+                    fill
+                    priority
                   />
                 </div>
                 <p className="text-lg text-gray-300 leading-relaxed">
@@ -124,22 +124,29 @@ const AboutSection = () => {
               Experience Level
             </h3>
             <div className="space-y-4">
-              {["Next.js", "React", "TypeScript", "UI/UX"].map(
-                (skill, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span>{skill}</span>
-                      <span>{96 - index * 2}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000"
-                        style={{ width: `${96 - index * 2}%` }}
-                      />
-                    </div>
+              {[
+                { name: "Next.js", level: 98 },
+                { name: "Tailwind CSS", level: 97 },
+                { name: "MongoDB", level: 95 },
+                { name: "React", level: 94 },
+                { name: "React Native", level: 94 },
+                { name: "NestJS", level: 93 },
+                { name: "TypeScript", level: 92 },
+                { name: "PostgreSQL", level: 86 },
+              ].map((skill, index) => (
+                <div key={index} className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
                   </div>
-                )
-              )}
+                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

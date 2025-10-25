@@ -98,7 +98,7 @@ const EnhancedSocialNav: React.FC = () => {
             </div>
 
             {/* Label Animation */}
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 overflow-hidden h-6">
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 h-6 whitespace-nowrap">
               <div className="text-sm font-medium text-gray-400 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 {label.split("").map((letter, index) => (
                   <span

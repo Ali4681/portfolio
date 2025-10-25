@@ -10,6 +10,7 @@ import {
   Target,
   Terminal,
   Users,
+  Smartphone,
 } from "lucide-react";
 import { useState } from "react";
 import ScrollAnimationWrapper from "./Scroll Animation Wrapper ";
@@ -22,15 +23,17 @@ const SkillsSection = () => {
   const skills = {
     frontend: [
       { name: "React", level: 94, icon: <Code />, years: 3 },
-      { name: "Next.js", level: 95, icon: <Layout />, years: 3 },
+      { name: "Next.js", level: 96, icon: <Layout />, years: 3 },
       { name: "TypeScript", level: 92, icon: <Terminal />, years: 3 },
-      { name: "Tailwind CSS", level: 97, icon: <Paintbrush />, years: 3 },
+      { name: "Tailwind CSS", level: 96, icon: <Paintbrush />, years: 3 },
+      { name: "React Native", level: 94, icon: <Smartphone />, years: 3 },
     ],
     backend: [
-      { name: "Node.js", level: 85, icon: <Terminal />, years: 2 },
-      { name: "PostgreSQL", level: 82, icon: <Database />, years: 2 },
+      { name: "NestJS", level: 93, icon: <Terminal />, years: 2 },
+      { name: "MongoDB", level: 95, icon: <Database />, years: 2 },
+      { name: "PostgreSQL", level: 86, icon: <Database />, years: 2 },
     ],
-    tools: [{ name: "Github", level: 80, icon: <GitBranch />, years: 1 }],
+    tools: [{ name: "Github", level: 92, icon: <GitBranch />, years: 1 }],
     cybersecurity: [
       {
         name: "Network Security Fundamentals",
