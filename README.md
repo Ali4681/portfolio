@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-3D-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
 
-[Live Website](https://alialbayati.dev) · [LinkedIn](https://linkedin.com/in/ali-al-bayati-59b41b319) · [Email](mailto:alialbayati468@gmail.com)
+[Live Website](https://alialbayati.vercel.app/) · [LinkedIn](https://linkedin.com/in/ali-al-bayati-59b41b319) · [Email](mailto:alialbayati468@gmail.com)
 
 </div>
 
@@ -128,7 +128,7 @@ The application is designed for deployment on [Vercel](https://vercel.com/). Add
 
 **Ali Mohammed Al-Bayati** — Full-Stack & Mobile Developer
 
-- Website: [alialbayati.dev](https://alialbayati.dev)
+- Website: [alialbayati.vercel.app](https://alialbayati.vercel.app/)
 - GitHub: [@Ali4681](https://github.com/Ali4681)
 - LinkedIn: [Ali Al-Bayati](https://linkedin.com/in/ali-al-bayati-59b41b319)
 - Email: [alialbayati468@gmail.com](mailto:alialbayati468@gmail.com)
