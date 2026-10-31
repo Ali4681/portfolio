@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-3D-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
 
-[Live Website](https://alialbayati.vercel.app/) · [LinkedIn](https://linkedin.com/in/ali-al-bayati-59b41b319) · [Email](mailto:alialbayati468@gmail.com)
+[Live Website](https://alialbayati.vercel.app/) · [LinkedIn](https://linkedin.com/in/ali-al-bayati-59b41b319) · [Email](mailto:contact@alialbayati.online)
 
 </div>
 
@@ -29,7 +29,7 @@ The interface combines an interactive 3D world, smooth scroll-driven transitions
 - Dark and light themes
 - Responsive navigation and CV download menu
 - Accessible interactions and `prefers-reduced-motion` support
-- Validated contact API with optional Resend email delivery
+- Validated contact API with Hostinger Mail email delivery
 - Optimized local images and statically generated pages with Next.js
 
 ## Tech Stack
@@ -75,8 +75,7 @@ npm install
 The site runs without email credentials, but contact-form delivery requires a `.env.local` file:
 
 ```env
-RESEND_API_KEY=your_resend_api_key
-CONTACT_EMAIL=your_email@example.com
+HOSTINGER_MAIL_API_TOKEN=your_hostinger_mail_api_token
 ```
 
 ### Development
@@ -131,7 +130,7 @@ The application is designed for deployment on [Vercel](https://vercel.com/). Add
 - Website: [alialbayati.vercel.app](https://alialbayati.vercel.app/)
 - GitHub: [@Ali4681](https://github.com/Ali4681)
 - LinkedIn: [Ali Al-Bayati](https://linkedin.com/in/ali-al-bayati-59b41b319)
-- Email: [alialbayati468@gmail.com](mailto:alialbayati468@gmail.com)
+- Email: [contact@alialbayati.online](mailto:contact@alialbayati.online)
 
 ## License
 
