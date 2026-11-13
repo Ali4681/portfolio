@@ -16,7 +16,7 @@ const projects = [
     id: "02",
     title: "ZAYTOUN",
     type: "Applied AI",
-    text: "An olive-leaf disease detector classifying seven conditions with MobileNetV2 and approximately 97% validation accuracy.",
+    text: "An olive-leaf disease detector trained across four classes with MobileNetV2 and 98.10% validation accuracy.",
     tags: ["TensorFlow", "MobileNetV2", "Flask"],
     icon: BrainCircuit,
     visual: "scan",
@@ -65,7 +65,7 @@ export default function FeaturedProjects({ reduced }: { reduced: boolean }) {
                   <span className="leaf">◒</span>
                   <i className="scanline" />
                   <strong>
-                    97<small>%</small>
+                    98.1<small>%</small>
                   </strong>
                 </>
               )}

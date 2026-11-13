@@ -46,14 +46,20 @@ The interface combines an interactive 3D world, smooth scroll-driven transitions
 
 ## Featured Work
 
-The portfolio presents projects including:
+The portfolio presents twelve projects, including:
 
-- **AutoService24** — a published vehicle-services marketplace with geolocation, real-time chat, authentication, notifications, and mobile clients.
+- **Beroya Holding — Multi-Brand Digital Platform** — a NestJS ERP and multilingual brand sites with CMS, role-based access, real-time communication, and media delivery.
+- **Beroya Holding — Enterprise ERP Frontend** — a bilingual, multi-sector workspace covering automotive, real estate, finance, sales, procurement, and operations.
+- **Beroya On+ — Shuttle Platform** — a school and university transit system with live tracking, role-scoped dashboards, and background jobs.
+- **Beroya On — Ride-Hailing Platform** — a dispatch, wallet, and finance system with real-time trip tracking and customer and staff web apps.
+- **Traffic Violations Management** — citizen, officer, and admin apps with offline synchronization, GPS and photo evidence, and payments.
 - **Olive Leaf Disease Detection** — a MobileNetV2-powered mobile diagnosis application with 98.10% validation accuracy.
+- **AutoService24** — a published vehicle-services marketplace with geolocation, real-time chat, authentication, notifications, and mobile clients.
+- **LegalConnect** — a cross-platform legal-services system with real-time communication, case tracking, and mobile support.
 - **University Timetable Generator** — a full-stack constraint-satisfaction scheduling platform.
 - **Islamic Inheritance Management** — a rule-based inheritance engine with interactive family trees and Arabic PDF reports.
-- **Traffic Violations Management** — a multi-role backend and mobile ecosystem with offline synchronization.
-- **LegalConnect** — a cross-platform legal-services system with real-time communication and case tracking.
+- **Floppy Ball** — a voice and gyroscope controlled mobile game.
+- **Vosk Offline Speech-to-Text** — an on-device speech recognition app with live transcription and no network dependency.
 
 ## Getting Started
 

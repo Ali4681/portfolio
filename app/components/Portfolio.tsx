@@ -53,17 +53,6 @@ type GallerySelection = {
   returnFocus: HTMLButtonElement;
 };
 
-export const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Tailwind",
-  "Node.js",
-  "NestJS",
-  "MongoDB",
-  "PostgreSQL",
-];
-
 const cvOptions = [
   {
     label: "Full-Stack",
@@ -72,35 +61,6 @@ const cvOptions = [
     filename: "Ali-Albayati-Full-Stack-CV.pdf",
   },
 ] as const;
-export const experiences = [
-  { year: "2025 — 2026", role: "Mobile Developer", company: "RADAR Company" },
-  { year: "2025", role: "Frontend Developer", company: "RAIZER Startup" },
-  { year: "2024", role: "Backend Developer", company: "RADAR Company" },
-  { year: "2023", role: "Frontend Developer", company: "RADAR Company" },
-];
-export const projects = [
-  {
-    id: "01",
-    name: "AutoService24",
-    type: "Mobile marketplace",
-    desc: "A production vehicle-services platform with real-time communication and mobile-first experiences.",
-    tech: "React Native · NestJS · WebSockets",
-  },
-  {
-    id: "02",
-    name: "StudyAI",
-    type: "AI learning system",
-    desc: "An intelligent study environment built around document processing, assistance, and focused learning workflows.",
-    tech: "Next.js · AI · TypeScript",
-  },
-  {
-    id: "03",
-    name: "Smart Scheduling AI",
-    type: "Constraint optimization",
-    desc: "A university scheduling system that transforms complex constraints into optimized, conflict-free timetables.",
-    tech: "Algorithms · CSP · Full Stack",
-  },
-];
 
 export default function Portfolio() {
   const reduced = usePrefersReducedMotion();
@@ -918,7 +878,7 @@ export default function Portfolio() {
               <p className="kicker">
                 {isArabic
                   ? ar.heroKicker
-                  : "FULL-STACK & MOBILE DEVELOPER // CREATIVE ENGINEER"}
+                  : `${profile.title.toUpperCase()} // CREATIVE ENGINEER`}
               </p>
               <h1
                 className={`${isArabic ? "arabic-name " : ""}${nameReady ? "name-ready" : ""}`.trim()}
@@ -1011,18 +971,18 @@ export default function Portfolio() {
             <p>
               {isArabic
                 ? ar.aboutText
-                : "I’m Ali, a full-stack and mobile developer based in Aleppo. I ship production systems across Next.js, NestJS, React Native, databases, real-time services, and applied AI — including apps published on both Google Play and the Apple App Store."}
+                : `I’m Ali, an ${profile.nationality.toLowerCase()} full-stack and mobile developer based in Aleppo. I build production products in TypeScript across NestJS, Next.js, and React Native—from secure APIs and real-time systems to bilingual web and mobile apps. My work spans enterprise platforms, AI products, and apps published on Google Play and the Apple App Store.`}
             </p>
             <div className="stat-line">
               <b>04</b>
               <span>
                 {isArabic ? (
-                  ar.years
+                  ar.professionalRoles
                 ) : (
                   <>
-                    Years building
+                    Professional
                     <br />
-                    digital products
+                    roles
                   </>
                 )}
               </span>
@@ -1059,12 +1019,12 @@ export default function Portfolio() {
             <p>
               {isArabic
                 ? ar.skillsText
-                : "Every tool has a purpose. Together they form a production stack for modern interfaces, reliable APIs, mobile products, and data-driven systems."}
+                : "A TypeScript-centered toolkit for enterprise web and mobile products, secure APIs, real-time systems, data platforms, AI integrations, and production delivery."}
             </p>
             <div className="skill-list">
               {portfolioSkills.map((s, i) => (
                 <div key={s.category}>
-                  <span>0{i + 1}</span>
+                  <span>{String(i + 1).padStart(2, "0")}</span>
                   <p>
                     <b>{isArabic ? arSkillCategories[i] : s.category}</b>
                     {s.value}
@@ -1138,7 +1098,7 @@ export default function Portfolio() {
                 >
                   <div className="card-index">
                     {p.id}
-                    <span>/08</span>
+                    <span>/{String(portfolioProjects.length).padStart(2, "0")}</span>
                   </div>
                   {mediaPreview ? (
                     <ProjectMediaPreview
@@ -1163,8 +1123,8 @@ export default function Portfolio() {
                   <h3>{p.name}</h3>
                   <p>{isArabic ? arProjects[i].desc : p.desc}</p>
                   <footer>
-                    {p.tech}
-                    <ArrowUpRight />
+                    <span>{p.tech}</span>
+                    <ArrowUpRight aria-hidden="true" />
                   </footer>
                 </article>
               );
@@ -1214,7 +1174,7 @@ export default function Portfolio() {
                 <small>
                   {isArabic
                     ? ar.educationDetail
-                    : "Software Engineering, Networks, Databases, Web Technologies, and Communication Systems."}
+                    : profile.educationDetail}
                 </small>
               </article>
               <article>
@@ -1226,7 +1186,7 @@ export default function Portfolio() {
                 <small>
                   {isArabic
                     ? ar.certificationDetail
-                    : "Network security, web penetration testing, threat detection, incident response, and vulnerability management. Official recommendation received."}
+                    : profile.certificationDetail}
                 </small>
               </article>
               <article>

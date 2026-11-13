@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://alialbayati.dev"),
   title: "Ali Al-Bayati | Full-Stack & Mobile Developer",
   description:
-    "Portfolio of Ali Mohammed Al-Bayati, a full-stack and mobile developer specializing in Next.js, NestJS, React Native, real-time systems, and applied AI.",
+    "Portfolio of Ali Mohammed Al-Bayati, a full-stack and mobile developer building enterprise platforms, web and mobile products, real-time systems, and applied AI.",
   openGraph: {
     title: "Ali Al-Bayati | Full-Stack & Mobile Developer",
     description:
-      "Production web, backend, mobile, and AI systems presented through an interactive 3D experience.",
+      "Enterprise web platforms, backend systems, mobile apps, and applied AI projects presented through an interactive portfolio.",
     type: "website",
     url: "/",
   },

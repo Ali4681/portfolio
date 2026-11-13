@@ -1040,11 +1040,18 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
   font: 8px var(--mono);
+  line-height: 1.6;
   color: #64748b;
+}
+.project-card footer > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .project-card footer svg {
   width: 15px;
+  flex: 0 0 auto;
 }
 .lab-panel {
   width: min(700px, 100%);
