@@ -2536,6 +2536,30 @@ html[lang="ar"] .hero-bottom > p {
   background: #4f46e5;
   transform: rotate(-8deg) scale(1.04);
 }
+.navbar-cv i.is-downloading {
+  background: linear-gradient(135deg, #4f46e5, #2563eb, #06b6d4);
+  animation: cv-download-pulse 0.9s ease-in-out infinite alternate;
+}
+.navbar-cv i.is-downloading svg {
+  animation: cv-download-bob 0.65s ease-in-out infinite alternate;
+}
+.navbar-cv:has(i.is-downloading) small {
+  color: #60a5fa;
+}
+@keyframes cv-download-pulse {
+  from { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.2), 0 5px 14px rgba(37, 99, 235, 0.28); }
+  to { box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.12), 0 0 22px rgba(59, 130, 246, 0.6); }
+}
+@keyframes cv-download-bob {
+  from { transform: translateY(-2px); }
+  to { transform: translateY(2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar-cv i.is-downloading,
+  .navbar-cv i.is-downloading svg {
+    animation: none;
+  }
+}
 [data-theme="light"] .navbar-cv {
   color: #172554;
   background: rgba(255, 255, 255, 0.78);

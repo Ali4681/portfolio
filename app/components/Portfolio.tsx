@@ -72,6 +72,7 @@ export default function Portfolio() {
   const [nameReady, setNameReady] = useState(false);
   const [menu, setMenu] = useState(false);
   const [cvMenu, setCvMenu] = useState(false);
+  const [cvDownloading, setCvDownloading] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
   const [activeNav, setActiveNav] = useState<string | null>(null);
   const [liteExperience, setLiteExperience] = useState<boolean | null>(null);
@@ -761,22 +762,26 @@ export default function Portfolio() {
               ref={cvButtonRef}
               className="navbar-cv"
               type="button"
-              aria-label="Download resume PDF"
+              aria-label={cvDownloading ? "Preparing resume download" : "Download resume PDF"}
+              aria-busy={cvDownloading}
               onClick={() => {
                 setMenu(false);
+                if (cvDownloading) return;
+                setCvDownloading(true);
                 const link = document.createElement("a");
                 link.href = cvOptions[0].href;
                 link.download = cvOptions[0].filename;
                 document.body.appendChild(link);
                 link.click();
                 link.remove();
+                window.setTimeout(() => setCvDownloading(false), 1400);
               }}
             >
               <span>
                 <b>Resume</b>
-                <small>Download PDF</small>
+                <small>{cvDownloading ? "Preparing download..." : "Download PDF"}</small>
               </span>
-              <i aria-hidden="true">
+              <i className={cvDownloading ? "is-downloading" : undefined} aria-hidden="true">
                 <Download />
               </i>
             </button>
