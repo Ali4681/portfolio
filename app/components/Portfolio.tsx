@@ -761,15 +761,16 @@ export default function Portfolio() {
               ref={cvButtonRef}
               className="navbar-cv"
               type="button"
-              aria-expanded={cvMenu}
-              aria-haspopup="menu"
-              aria-controls="cv-download-menu"
-              aria-label="Choose a resume to download"
+              aria-label="Download resume PDF"
               onClick={() => {
                 setMenu(false);
-                setCvMenu((open) => !open);
+                const link = document.createElement("a");
+                link.href = cvOptions[0].href;
+                link.download = cvOptions[0].filename;
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
               }}
-              onKeyDown={handleCvTriggerKeyDown}
             >
               <span>
                 <b>Resume</b>
@@ -779,42 +780,6 @@ export default function Portfolio() {
                 <Download />
               </i>
             </button>
-            <div
-              id="cv-download-menu"
-              className="cv-menu__panel"
-              aria-hidden={!cvMenu}
-              inert={!cvMenu}
-            >
-              <div className="cv-menu__header">
-                <span>MY RESUME</span>
-                <strong>Download my CV</strong>
-              </div>
-              <div
-                className="cv-menu__list"
-                role="menu"
-                aria-label="Resume downloads"
-                onKeyDown={handleCvMenuKeyDown}
-              >
-                {cvOptions.map((option, index) => (
-                  <a
-                    key={option.label}
-                    href={option.href}
-                    download={option.filename}
-                    role="menuitem"
-                    onClick={() => setCvMenu(false)}
-                  >
-                    <small>0{index + 1}</small>
-                    <span>
-                      <b>{option.label}</b>
-                      <em>{option.detail}</em>
-                    </span>
-                    <i aria-hidden="true">
-                      <Download />
-                    </i>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
           <button
             className={`theme-toggle ${theme}`}
