@@ -31,7 +31,7 @@ export const portfolioProjects = [
 export const profile = {
   name: "Ali Mohammed Al-Bayati",
   title: "Full-Stack & Mobile Developer",
-  email: "contact@alialbayati.online",
+  email: "alialbayati468@gmail.com",
   phone: "+963 967 212 983",
   location: "Aleppo, Syria",
   github: "https://github.com/Ali4681",

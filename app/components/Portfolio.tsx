@@ -71,24 +71,6 @@ const cvOptions = [
     href: "/CVs/Full-Stack.pdf",
     filename: "Ali-Albayati-Full-Stack-CV.pdf",
   },
-  {
-    label: "Frontend",
-    detail: "React, Next.js & UI engineering",
-    href: "/CVs/Frontend.pdf",
-    filename: "Ali-Albayati-Frontend-CV.pdf",
-  },
-  {
-    label: "Backend",
-    detail: "Node.js, NestJS & data systems",
-    href: "/CVs/Backend.pdf",
-    filename: "Ali-Albayati-Backend-CV.pdf",
-  },
-  {
-    label: "Mobile",
-    detail: "React Native, Expo, iOS & Android",
-    href: "/CVs/Mobile.pdf",
-    filename: "Ali-Albayati-Mobile-CV.pdf",
-  },
 ] as const;
 export const experiences = [
   { year: "2025 — 2026", role: "Mobile Developer", company: "RADAR Company" },
@@ -831,7 +813,7 @@ export default function Portfolio() {
             >
               <span>
                 <b>Resume</b>
-                <small>4 tailored PDFs</small>
+                <small>Download PDF</small>
               </span>
               <i aria-hidden="true">
                 <Download />
@@ -844,8 +826,8 @@ export default function Portfolio() {
               inert={!cvMenu}
             >
               <div className="cv-menu__header">
-                <span>RESUME ARCHIVE</span>
-                <strong>Choose your specialization</strong>
+                <span>MY RESUME</span>
+                <strong>Download my CV</strong>
               </div>
               <div
                 className="cv-menu__list"
